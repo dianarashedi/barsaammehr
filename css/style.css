@@ -1,0 +1,2238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   HOME PAGE
+======================================== */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #000;
+}
+
+.home-scene {
+  position: relative;
+
+  width: 100%;
+  max-width: 1728px;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  margin: 0 auto;
+}
+
+/* پنجره*/
+
+.home-window {
+  position: absolute;
+
+  padding: 10px 10% 0 10%;
+
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+/* میز*/
+
+.home-desk {
+  position: absolute;
+
+  top: 18%;
+  left: 26%;
+
+  width: 47%;
+
+  height: auto;
+
+  display: block;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.home-link {
+  position: absolute;
+
+  display: block;
+
+  padding: 0;
+  margin: 0;
+
+  line-height: 0;
+
+  z-index: 10;
+
+  text-decoration: none;
+}
+
+.home-link img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: none;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* حال خوب ما */
+
+.link-joyful {
+  top: 21%;
+  right: 17%;
+
+  width: 25%;
+}
+
+/* درباره ما */
+
+.link-about {
+  top: 45%;
+  right: 47.7%;
+
+  width: 5%;
+}
+
+/* تولیدات ما */
+
+.link-products {
+  top: 16%;
+  right: 42.5%;
+
+  width: 16%;
+}
+
+/* همکاران ما */
+
+.link-team {
+  top: 55%;
+  right: 17.8%;
+
+  width: 25%;
+}
+
+/* در حال تولید */
+
+.link-Production {
+  top: 19.5%;
+  left: 14%;
+
+  width: 28%;
+}
+
+/* مقالات ما */
+
+.link-articles {
+  top: 34%;
+  left: 14%;
+
+  width: 25%;
+}
+
+/* پروژه‌های در دست تولید */
+
+.link-preproductions {
+  top: 42%;
+  left: 14%;
+
+  width: 33%;
+}
+
+/* فیلم‌نامه بازی */
+
+.link-screenplay {
+  top: 32%;
+  right: 17%;
+
+  width: 27%;
+}
+
+/* English */
+
+.link-English {
+  bottom: 30.25%;
+  left: 47.3%;
+
+  width: 5%;
+}
+
+/* SEARCH */
+
+.home-search {
+  position: absolute;
+
+  bottom: 28%;
+  right: 27.5%;
+
+  width: 16%;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  z-index: 20;
+}
+
+.home-search img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: none;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+button {
+  font-family: inherit;
+}
+
+/* =========================
+ معرفی برسام مهر
+========================= */
+.home-intro {
+  width: 100%;
+  background: #000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 0;
+  padding-bottom: 120px;
+
+  text-align: center;
+}
+
+/* عنوان اصلی */
+
+.home-intro h1 {
+  margin: -14% 0 7% 0;
+
+  color: #fff;
+
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+
+  line-height: 1.5;
+  direction: rtl;
+}
+
+/* پوسترها */
+
+.intro-poster {
+  display: block;
+  width: min(700px, 85vw);
+
+  margin-top: 15px;
+  margin-bottom: 50px;
+
+  line-height: 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: transform 0.2s ease;
+}
+
+.intro-poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.intro-poster:hover {
+  transform: translateY(-10px);
+}
+
+.intro-poster:hover img {
+  transform: scale(1.12);
+  filter: brightness(1.12);
+}
+
+.intro-poster-second {
+  margin-top: 90px;
+}
+
+/* متن‌های زیر پوستر */
+.intro-text {
+  width: 94%;
+  max-width: none;
+  margin-top: 40px;
+  padding: 0 3% 0 3%;
+
+  box-sizing: border-box;
+
+  color: #fff;
+  direction: rtl;
+  text-align: right;
+
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.intro-text h2,
+.intro-text p {
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  text-align: right;
+  direction: rtl;
+}
+
+.intro-text h2 {
+  margin: 0 0 20px;
+  font-weight: 400;
+}
+
+.intro-text .intro-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.intro-text p {
+  margin: 0 0 20px;
+  font-weight: 400;
+}
+
+/* پایان صفحه HOME */
+
+.home-ending {
+  width: 60%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 35%;
+  padding-bottom: 0;
+
+  color: #fff;
+  direction: rtl;
+}
+
+/* عکس مهرک و حسین */
+
+.mehrak-hosein {
+  display: block;
+  width: min(900px, 85vw);
+  height: auto;
+  object-fit: contain;
+}
+
+/* متن پایانی */
+
+.ending-text {
+  width: 100%;
+  padding: 0 8%;
+  margin-top: 2%;
+
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2.4;
+
+  text-align: right;
+  direction: rtl;
+}
+
+.ending-text p {
+  margin: 0 0 25px;
+}
+
+.ending-names {
+  margin-top: 4% !important;
+  color: #f28c28;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5%;
+
+  direction: ltr;
+}
+
+.ending-names a {
+  color: #f28c28;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.ending-names a:hover {
+  opacity: 0.65;
+}
+
+.ending-names span {
+  color: #f28c28;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.home-footer {
+  width: 100%;
+  min-height: 400px;
+
+  background: #000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  color: #fff;
+}
+
+.footer-logo {
+  display: block;
+  width: 92%;
+  max-width: none;
+  height: auto;
+  margin-top: -7%;
+}
+
+/* ایمیل */
+
+.footer-email {
+  margin-top: 45px;
+
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+
+  direction: ltr;
+
+  transition: opacity 0.2s ease;
+}
+
+.footer-email:hover {
+  opacity: 0.6;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.site-navbar {
+  width: 100%;
+  background: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2% 0;
+
+  direction: rtl;
+
+  position: relative;
+  z-index: 100;
+}
+
+.navbar-items {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0;
+  transform: translateX(-2.5%);
+}
+
+.navbar-item {
+  display: block;
+
+  padding: 0;
+  margin: 0;
+
+  line-height: 0;
+  text-decoration: none;
+}
+
+.navbar-item img {
+  display: block;
+
+  width: 80px;
+  height: auto;
+
+  max-width: none;
+}
+
+.navbar-logo img {
+  width: 105px;
+}
+
+.navbar-icon img {
+  width: 120px;
+  padding: 4% 0;
+}
+
+/* =========================
+  WRONGLESS PAGE
+========================= */
+
+.wrongless-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #000;
+
+  direction: rtl;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* پوسترهای فیلم‌های دیگر */
+
+.other-films {
+  width: 180%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  flex-direction: row;
+  direction: ltr;
+
+  gap: 1%;
+
+  padding-top: 2%;
+  padding-left: 57%;
+}
+
+.other-film {
+  display: block;
+
+  width: 10%;
+
+  line-height: 0;
+
+  text-decoration: none;
+}
+
+.other-film img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* سه پوستر اصلی */
+
+.wrongless-posters {
+  width: 70%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 2%;
+
+  margin-top: 1.5%;
+}
+
+.wrongless-poster {
+  width: 33.333%;
+
+  line-height: 0;
+}
+
+.wrongless-poster img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* ویس داستان بی‌غلط */
+
+.wrongless-audio {
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5%;
+
+  margin-top: 3%;
+}
+
+/* تصویر شنیدن قصه */
+
+.audio-story-image-wrongless {
+  width: 48%;
+
+  padding: 0;
+  margin: 0;
+
+  line-height: 0;
+}
+
+.audio-story-image-wrongless img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* کنترل‌های صوتی */
+
+.audio-controls {
+  width: 35%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3%;
+}
+
+.audio-control {
+  width: 15%;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  line-height: 0;
+}
+
+.audio-control img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.2s ease;
+}
+
+.audio-control:hover img {
+  transform: scale(1.1);
+}
+
+/* متن اول */
+
+.wrongless-next-section {
+  position: relative;
+  width: 100%;
+  margin-top: 5%;
+  right: 14.5%;
+}
+
+.wrongless-background {
+  display: block;
+  width: 70%;
+  height: fit-content;
+}
+
+.wrongless-background-text {
+  position: absolute;
+
+  top: 28.5%;
+  right: 36%;
+
+  transform: translate(50%, -50%);
+
+  width: 67%;
+
+  color: #222;
+  font-size: 20px;
+  line-height: 2;
+
+  text-align: right;
+  direction: rtl;
+}
+
+.wrongless-background-text h2 {
+  font-size: 28px;
+  line-height: 1;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+/* VIDEO SLIDER - wrongless */
+
+.wrongless-videos {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3%;
+
+  margin-top: 5%;
+
+  direction: ltr;
+}
+
+/* محل ویدیو */
+
+.video-slider {
+  width: 50%;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: #000;
+}
+
+/* هر اسلاید */
+
+.video-slide {
+  width: 100%;
+
+  display: none;
+
+  line-height: 0;
+}
+
+/* فقط اسلاید فعال */
+
+.video-slide.active {
+  display: block;
+}
+
+/* Embed آپارات */
+
+.video-slide > div {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+/* فلش‌ها */
+
+.video-arrow {
+  width: 4%;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  line-height: 0;
+
+  flex-shrink: 0;
+}
+
+.video-arrow img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.2s ease;
+}
+
+.video-arrow:hover img {
+  transform: scale(1.1);
+}
+
+/* DOTS */
+
+.video-dots {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 1%;
+
+  margin-top: 1.5%;
+}
+
+.video-dot {
+  width: 0.5vw;
+  height: 0.5vw;
+
+  min-width: 6px;
+  min-height: 6px;
+
+  max-width: 15px;
+  max-height: 15px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #777;
+
+  cursor: pointer;
+}
+
+.video-dot.active {
+  background: #fff;
+}
+
+.video-story-image {
+  width: 25%;
+  margin: 2% auto;
+
+  display: flex;
+  justify-content: center;
+}
+
+.video-story-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* متن دوم */
+
+.wrongless-background-text2 {
+  position: absolute;
+
+  top: 18%;
+  right: 33%;
+
+  transform: translate(50%, -50%);
+
+  width: 55%;
+
+  color: #222;
+  font-size: 20px;
+  line-height: 2;
+
+  text-align: right;
+  direction: rtl;
+}
+
+/* عکس های پیش تولید */
+
+.wrongless-photos {
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3%;
+
+  margin: 4% auto 0;
+
+  direction: ltr;
+}
+
+/* محل عکس */
+
+.photo-slider {
+  width: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.photo-slider img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* فلش‌ها */
+
+.photo-arrow {
+  width: 4%;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  line-height: 0;
+
+  flex-shrink: 0;
+}
+
+.photo-arrow img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.2s ease;
+}
+
+.photo-arrow:hover img {
+  transform: scale(1.1);
+}
+
+/* PHOTO DOTS */
+
+.photo-dots {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5%;
+
+  margin-top: 1.5%;
+}
+
+.photo-dot {
+  width: 0.5vw;
+  height: 0.5vw;
+
+  min-width: 6px;
+  min-height: 6px;
+
+  max-width: 15px;
+  max-height: 15px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #777;
+
+  cursor: pointer;
+}
+
+.photo-dot.active {
+  background: #fff;
+}
+
+/* متن سوم */
+
+.wrongless-background-text3 {
+  position: absolute;
+
+  top: 4.5%;
+  left: 42%;
+
+  width: 45%;
+
+  color: #222;
+  font-size: 20px;
+  line-height: 2;
+
+  text-align: center;
+  direction: rtl;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrongless-background-logo {
+  display: block;
+  width: 60%;
+  height: auto;
+}
+
+.wrongless-background-text3 > div {
+  width: 83%;
+  text-align: center;
+  transform: translate(12%, -12%);
+}
+
+/* عکس های در حال تولید*/
+
+.wrongless-production-photos {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  margin: 4% auto 0;
+  direction: ltr;
+}
+
+.production-photo-slider {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.production-photo-slider img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.production-photo-arrow {
+  width: 4%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.production-photo-arrow img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.production-photo-arrow:hover img {
+  transform: scale(1.1);
+}
+
+.production-photo-dots {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5%;
+}
+
+.production-photo-dot {
+  width: 0.5vw;
+  height: 0.5vw;
+  min-width: 6px;
+  min-height: 6px;
+  max-width: 15px;
+  max-height: 15px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #777;
+  cursor: pointer;
+}
+
+.production-photo-dot.active {
+  background: #fff;
+}
+
+/* مشاهده ی فیلم بی غلط */
+
+.wrongless-video-link {
+  width: 40%;
+  margin-right: 28%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  margin-top: 5%;
+  direction: rtl;
+}
+
+/* دکمه برگشت به بالا */
+.wrongless-back-button {
+  width: 9%;
+  margin: -7% -12.3% 0% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-top {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.back-to-top img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.back-to-top:hover img {
+  transform: translateY(-10%);
+}
+
+/* تصویر رفتن به صفحه ویدیو */
+.wrongless-video-button {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrongless-video-button a {
+  display: block;
+  width: 100%;
+}
+
+.wrongless-video-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*.wrongless-video-link img:hover {
+  transform: scale(1.05);
+}  هاور عکس مشاهده فیلم*/
+
+/* صفحه پخش فیلم بی‌غلط*/
+
+.wrongless-video-page {
+  width: 80%;
+  margin-right: 10%;
+  min-height: 100vh;
+
+  background: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  direction: rtl;
+}
+
+.wrongless-aparat {
+  width: 70%;
+  max-width: 1200px;
+
+  aspect-ratio: 16 / 9;
+}
+
+/* نقطه‌های لغزنده - مشترک */
+
+.dots-window {
+  margin: 1.5% auto 3%;
+  overflow: hidden; /* عرضش رو JS تنظیم می‌کنه */
+}
+
+.dots-track {
+  display: flex;
+  align-items: center;
+  direction: ltr;
+
+  transition: transform 0.3s ease;
+}
+
+.dots-dot {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dots-dot::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #777;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.dots-dot.near::before {
+  transform: scale(1.4);
+}
+
+.dots-dot.active::before {
+  background: #fff;
+  transform: scale(1.9);
+}
+
+/*================
+صفحه واقعا نه 
+=================*/
+
+.comeon-page {
+  min-height: 100vh;
+  /*background-color: #f28c28;
+  background-image: url("../images/comeon/background.webp");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
+
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comeon-poster {
+  width: 100%;
+  max-width: 66%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.comeon-poster img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* شنیدن قصه ی واقعا نه */
+.comeon-audio {
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5%;
+
+  margin-top: 3%;
+
+  direction: rtl;
+}
+
+.audio-story-image-comeon {
+  width: 40%;
+
+  padding: 0;
+  margin: 0;
+
+  line-height: 0;
+}
+
+.audio-story-image-comeon img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* متن اول */
+.comeon-next-section {
+  position: relative;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.comeon-next-section p {
+  color: #fff;
+  font-size: 20px;
+  line-height: 2;
+  text-align: center;
+  direction: rtl;
+}
+
+/* متن درباره ساخت فیلم */
+.comeon-story-text {
+  width: 70%;
+  margin: 6% auto 0;
+
+  color: #fff;
+
+  direction: rtl;
+  text-align: right;
+
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.comeon-story-text p {
+  margin-bottom: 2%;
+}
+
+.comeon-story-text h2 {
+  margin: -5% 0 2% 0;
+}
+
+.comeon-videos {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3%;
+
+  margin-top: 5%;
+
+  direction: ltr;
+}
+
+/* عکس‌های در حال تولید - واقعا نه */
+.comeon-production-photos {
+  width: 60%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3%;
+
+  margin: 4% auto 0;
+
+  direction: ltr;
+}
+
+/* نقطه‌های زیر اسلایدر تولید */
+
+.production-photo-dots {
+  flex-wrap: wrap;
+  margin: 1.5% auto 5%;
+  padding: 0 10%;
+  gap: 0.6%;
+}
+
+/* انیمیشن نرم موقع عوض شدن عکس */
+
+.production-photo-slider img {
+  transition: opacity 0.25s ease;
+}
+
+.production-photo-slider img.fade-out {
+  opacity: 0;
+}
+
+/* لوگوی وسط صفحه */
+.page-logo {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5% 0;
+}
+
+.page-logo-img {
+  display: block;
+
+  width: 25%;
+  max-width: 320px;
+  height: auto;
+}
+
+/* عوامل فیلم - واقعا نه */
+
+.comeon-credits {
+  width: 70%;
+  margin: 3% auto 8%;
+
+  color: #fff;
+
+  direction: rtl;
+  text-align: center;
+
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.comeon-credits p {
+  margin-bottom: 1.5%;
+}
+
+.comeon-credits strong {
+  font-weight: 700;
+}
+
+/* مشاهده‌ی فیلم واقعا نه */
+
+.comeon-video-link {
+  width: 40%;
+  margin: 0 auto 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+
+  direction: rtl;
+}
+
+/* دکمه برگشت به بالا */
+
+.comeon-back-button {
+  width: 9%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* تصویر رفتن به صفحه ویدیو */
+
+.comeon-video-button {
+  width: 35%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comeon-video-button a {
+  display: block;
+  width: 100%;
+}
+
+.comeon-video-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body.comeon-body {
+  background-color: #000;
+  background-image: url("../images/comeon/background.webp");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 100% auto;
+}
+
+/* صفحه پخش فیلم واقعا نه*/
+
+.comeon-video-page {
+  width: 80%;
+  margin-right: 10%;
+  min-height: 100vh;
+
+  background: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  direction: rtl;
+}
+
+.comeon-aparat {
+  width: 70%;
+  max-width: 1200px;
+
+  aspect-ratio: 16 / 9;
+}
+
+/* ===========================
+صفحه از قاب من
+===============================*/
+.frommyframe-page {
+  min-height: 100vh;
+  /*background-color: #f28c28;
+  background-image: url("../images/comeon/background.webp");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
+
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frommyframe-poster {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.frommyframe-poster img {
+  width: 66%;
+  height: auto;
+  display: block;
+}
+
+.frommyframe-audio {
+  width: 80%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5%;
+
+  margin-top: 3%;
+}
+
+/* تصویر «شنیدن قصه» */
+
+.audio-story-image-frommyframe {
+  width: 48%;
+  padding: 0;
+  margin: 0;
+
+  line-height: 0;
+}
+
+.audio-story-image-frommyframe img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+/* کنترل‌های صوتی */
+
+.frommyframe-audio .audio-controls {
+  width: 35%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3%;
+}
+
+/* هر دکمه */
+
+.frommyframe-audio .audio-control {
+  width: 15%;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  line-height: 0;
+}
+
+/* عکس داخل دکمه */
+
+.frommyframe-audio .audio-control img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.2s ease;
+}
+
+.frommyframe-next-section {
+  width: 70%;
+  margin: 6% auto 0;
+
+  color: #fff;
+
+  direction: rtl;
+  text-align: right;
+
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.frommyframe-next-section h2 {
+  margin: 0 0 2% 0;
+
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+
+  text-align: right;
+}
+
+.frommyframe-next-section p {
+  margin-bottom: 2%;
+
+  color: #fff;
+  font-size: 16px;
+  line-height: 2;
+
+  text-align: right;
+  direction: rtl;
+}
+
+.frommyframe-videos {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 5%;
+
+  direction: ltr;
+}
+
+.frommyframe-videos > div {
+  width: 50%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+}
+
+/* عنوان عکس‌های فیلمبرداری - از قاب من */
+
+.frommyframe-photos-title {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 4% auto 0;
+}
+
+.frommyframe-photos-title img {
+  display: block;
+
+  width: 40%;
+  height: auto;
+}
+
+/* اسلایدر عکس‌های فیلمبرداری - از قاب من */
+
+.frommyframe-photos {
+  width: 60%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 3%;
+
+  margin: 4% auto 0;
+
+  direction: ltr;
+}
+
+.frommyframe-photo-slider {
+  width: 70%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.frommyframe-photo-slider img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.frommyframe-photo-arrow {
+  width: 4%;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+  line-height: 0;
+
+  flex-shrink: 0;
+}
+
+.frommyframe-photo-arrow img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  transition: transform 0.2s ease;
+}
+
+.frommyframe-photo-arrow:hover img {
+  transform: scale(1.1);
+}
+
+/* نقطه‌ها */
+
+/* قاب ثابت: فقط ۷ نقطه دیده می‌شود */
+
+.frommyframe-photo-dots {
+  width: 126px; /* 7 نقطه × 18px */
+  margin: 1.5% auto 5%;
+  overflow: hidden;
+}
+
+/* ردیف همه‌ی نقطه‌ها که می‌لغزد */
+
+.frommyframe-photo-dots-track {
+  display: flex;
+  align-items: center;
+  direction: ltr;
+
+  transition: transform 0.3s ease;
+}
+
+.frommyframe-photo-dot {
+  flex: 0 0 18px; /* هر نقطه یک خانه‌ی ۱۸ پیکسلی */
+  width: 18px;
+  height: 18px;
+
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* خود دایره داخل خانه */
+
+.frommyframe-photo-dot::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #777;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.frommyframe-photo-dot.near::before {
+  transform: scale(1.4);
+}
+
+.frommyframe-photo-dot.active::before {
+  background: #fff;
+  transform: scale(1.9);
+}
+
+/* افکت نرم عوض شدن عکس */
+
+.photo-slider img,
+.frommyframe-photo-slider img {
+  transition: opacity 0.25s ease;
+}
+
+.photo-slider img.fade-out,
+.frommyframe-photo-slider img.fade-out {
+  opacity: 0;
+}
+
+/* دکمه برگشت به بالا - از قاب من */
+
+.frommyframe-back-button {
+  width: 3%;
+  margin: 3% auto 5%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===========================
+صفحه فیلم‌های ما
+===============================*/
+
+.filmography-posters {
+  width: 80%;
+  margin: 5% auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 1%;
+
+  direction: rtl;
+}
+
+.filmography-item {
+  display: block;
+  width: 25%;
+
+  text-decoration: none;
+  text-align: center;
+}
+
+.filmography-poster-image {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.filmography-poster-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.filmography-item:hover .filmography-poster-image img {
+  transform: scale(0.92);
+}
+
+/* اسم فیلم و سال تولید */
+
+.filmography-title {
+  margin-top: 4%;
+
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 4;
+}
+
+.filmography-year {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.filmography-text {
+  width: 63%;
+  margin: 3% auto 6%;
+  direction: rtl;
+  text-align: right;
+}
+
+.filmography-text p {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 17px;
+  line-height: 2;
+}
+
+/* =======================
+صفحه ی داستان های صوتی ما
+======================= */
+
+/* پوستر */
+.audiostories-posters {
+  width: 90%;
+  margin: 3% auto 3%;
+  padding-left: 8%;
+  display: flex;
+  justify-content: flex-start;
+
+  direction: ltr;
+}
+
+.audiostories-poster {
+  display: block;
+  width: 25%;
+
+  text-decoration: none;
+  text-align: center;
+  direction: rtl;
+}
+
+.audiostories-poster-image {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.audiostories-poster-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.audiostories-poster:hover .audiostories-poster-image img {
+  transform: scale(0.92);
+}
+
+.audiostories-poster-caption {
+  margin-top: 4%;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+/* متن */
+.audiostories-text {
+  width: 70%;
+  margin: 3% auto 6%;
+  direction: rtl;
+  text-align: right;
+}
+
+.audiostories-text p {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.audiostories-poster-subcaption {
+  color: #aaa;
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =======================
+صفحه ی سریال صوتی راز شازده کوچولو
+======================= */
+
+.littleprince-text {
+  width: 70%;
+  margin: 5% auto 6%;
+
+  direction: rtl;
+  text-align: right;
+}
+
+.littleprince-text h1 {
+  margin-bottom: 2%;
+
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.littleprince-text p {
+  margin-bottom: 2%;
+
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+/* ================
+صفحه‌ی تئاترهای ما
+=================== */
+
+/* پوستر */
+.ourtheater-posters {
+  width: 90%;
+  margin: 3% auto 3%;
+  padding-left: 8%;
+  display: flex;
+  justify-content: flex-start;
+
+  direction: ltr;
+}
+
+.ourtheater-poster {
+  display: block;
+  width: 25%;
+
+  text-decoration: none;
+  text-align: center;
+  direction: rtl;
+}
+
+.ourtheater-poster-image {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.ourtheater-poster-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.ourtheater-poster:hover .ourtheater-poster-image img {
+  transform: scale(0.92);
+}
+
+.ourtheater-poster-caption {
+  margin-top: 4%;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+/* متن */
+.ourtheater-text {
+  width: 70%;
+  margin: 3% auto 6%;
+  direction: rtl;
+  text-align: right;
+}
+
+.ourtheater-text p {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.ourtheater-poster-subcaption {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ================
+صفحه‌ی در حال اجرا (تئاتر)
+=================== */
+
+.performing-poster {
+  width: 100%;
+  margin: 3% auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.performing-poster img {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.performing-text {
+  width: 70%;
+  margin: 4% auto 0;
+  direction: rtl;
+  text-align: right;
+}
+
+.performing-text p {
+  margin-bottom: 2%;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 17px;
+  line-height: 2;
+}
+
+/* اسلایدر ویدیو */
+
+.performing-videos {
+  width: 100%;
+  margin-top: 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+
+  direction: ltr;
+}
+
+.performing-video-slider {
+  width: 55%;
+}
+
+.performing-video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+
+.performing-video-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.performing-video-arrow {
+  width: 4%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.performing-video-arrow img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.performing-video-arrow:hover img {
+  transform: scale(1.1);
+}
+
+/* عنوان و کپشن زیر ویدیو */
+
+.performing-video-info {
+  width: 55%;
+  margin: 2% auto 0;
+
+  direction: rtl;
+  text-align: center;
+
+  transition: opacity 0.25s ease;
+}
+
+.performing-video-info.fade-out {
+  opacity: 0;
+}
+
+.performing-video-title {
+  margin-bottom: 1%;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.performing-video-caption {
+  color: #aaa;
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  white-space: pre-line;
+  text-align: right;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .home-ending {
+    padding-top: 140px;
+    padding-bottom: 120px;
+  }
+
+  .mehrak-hosein {
+    width: 85vw;
+  }
+
+  .ending-text {
+    padding: 0 6%;
+    font-size: 14px;
+    line-height: 2.2;
+  }
+
+  .home-footer {
+    min-height: 320px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  .footer-logo {
+    width: 65vw;
+  }
+
+  .footer-email {
+    margin-top: 35px;
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   LARGE SCREENS
+======================================== */
+
+@media (min-width: 1728px) {
+  .home-scene {
+    width: 1728px;
+    height: 972px;
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1024px) {
+  .home-scene {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}
