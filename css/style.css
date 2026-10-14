@@ -92,6 +92,10 @@ body {
   z-index: 10;
 
   text-decoration: none;
+
+
+    pointer-events: auto;
+
 }
 
 .home-link img {
@@ -2265,6 +2269,8 @@ body.comeon-body {
   width: 17.1%;
   height: 29.1%;
 }
+
+
 
 /* =========================================
    MOBILE
