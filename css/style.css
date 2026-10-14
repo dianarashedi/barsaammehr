@@ -2179,6 +2179,93 @@ body.comeon-body {
   text-align: right;
 }
 
+/* =================
+صفحه‌ی تولیدات ما
+=================== */
+
+.intro-text {
+  text-align: center;
+  margin: 0;
+  padding: 0 16px;
+}
+
+.intro-text p {
+  margin: 0 auto 60px;   /* عدد آخر = فاصله تا حباب‌ها */
+  max-width: 700px;
+  font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+  font-weight: 600;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.products-bubbles {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.bubbles-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+}
+
+.bubbles-wrap img {
+  width: 100%;
+  display: block;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.bubble:hover,
+.bubble:focus-visible {
+  transform: scale(1.06);
+  box-shadow: 0 0 25px rgba(13, 13, 13, 0.6);
+}
+
+.bubble-theater {
+  left: 0.3%;
+  top: 8.5%;
+  width: 16.6%;
+  height: 28.1%;
+}
+.bubble-films {
+  left: 32%;
+  top: 7.7%;
+  width: 17.1%;
+  height: 29.1%;
+}
+.bubble-audio {
+  left: 78.6%;
+  top: 8%;
+  width: 17.7%;
+  height: 30%;
+}
+.bubble-books {
+  left: 5%;
+  top: 60.5%;
+  width: 16.6%;
+  height: 28.1%;
+}
+.bubble-red {
+  left: 35.3%;
+  top: 56.4%;
+  width: 24.3%;
+  height: 41.2%;
+}
+.bubble-purple {
+  left: 76.4%;
+  top: 65.4%;
+  width: 17.1%;
+  height: 29.1%;
+}
+
 /* =========================================
    MOBILE
 ========================================= */
