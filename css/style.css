@@ -93,9 +93,7 @@ body {
 
   text-decoration: none;
 
-
-    pointer-events: auto;
-
+  pointer-events: auto;
 }
 
 .home-link img {
@@ -109,6 +107,38 @@ body {
   transition:
     transform 0.2s ease,
     filter 0.2s ease;
+}
+
+.home-link .zoom {
+  position: absolute;
+  left: calc(var(--l, 0) * 1%);
+  top: calc(var(--t, 0) * 1%);
+  width: calc(var(--w, 100) * 1%);
+  height: calc(var(--h, 100) * 1%);
+
+  background-image: var(--img);
+  background-repeat: no-repeat;
+  background-size: calc(10000% / var(--w, 100)) calc(10000% / var(--h, 100));
+  background-position: calc(var(--l, 0) / (100 - var(--w, 100)) * 100%)
+    calc(var(--t, 0) / (100 - var(--h, 100)) * 100%);
+
+  opacity: 0;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.home-link:hover {
+  z-index: 15;
+}
+
+.home-link:hover .zoom {
+  opacity: 1;
+  transform: none;
+ /* ضخامت بیشتر */
+filter: drop-shadow(1.5px 0 0 #fff) drop-shadow(-1.5px 0 0 #fff)
+  drop-shadow(0 1.5px 0 #fff) drop-shadow(0 -1.5px 0 #fff);
 }
 
 /* حال خوب ما */
@@ -190,6 +220,16 @@ body {
   left: 47.3%;
 
   width: 5%;
+}
+
+.home-logo {
+  position: absolute;
+  z-index: 10;
+
+  bottom: 28%; /* همون bottom دکمه‌ی سرچ → موازی با اون */
+  right: 69%; /* چپ‌تر از سرچ (سرچ right: 27.5% داره) */
+
+  width: 16%;
 }
 
 /* SEARCH */
@@ -336,11 +376,6 @@ button {
   direction: rtl;
 }
 
-.intro-text h2 {
-  margin: 0 0 20px;
-  font-weight: 400;
-}
-
 .intro-text .intro-title {
   font-size: 36px;
   font-weight: 700;
@@ -481,7 +516,7 @@ button {
   align-items: center;
   justify-content: center;
 
-  padding: 2% 0;
+  padding: 2% 0 0 0;
 
   direction: rtl;
 
@@ -528,6 +563,48 @@ button {
   padding: 4% 0;
 }
 
+.navbar-search-row {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start; /* راست، چون RTL */
+
+  padding: 0 24%; /* همون مقدار قبلی؛ برای تنظیم دقیق پایین‌تر توضیح دادم */
+  margin-top: 1%; /* چسباندن به نوبار */
+  margin-bottom: 2%;
+
+  direction: rtl;
+}
+
+.navbar-search {
+  display: block;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.navbar-search img {
+  display: block;
+  width: 180px; /* اندازه‌ی ثابت، نه درصدی */
+  height: auto;
+}
+
+.navbar-item:not(.navbar-logo):not(.navbar-icon) {
+  position: relative;
+}
+
+.navbar-item:not(.navbar-logo):not(.navbar-icon) img {
+  transition: transform 0.2s ease;
+}
+
+.navbar-item:not(.navbar-logo):not(.navbar-icon):hover {
+  z-index: 5; /* که روی همسایه‌ها بیفتد */
+}
+
+.navbar-item:not(.navbar-logo):not(.navbar-icon):hover img {
+  transform: scale(
+    1.12
+  ); /* بزرگ‌شدن از مرکز به بیرون؛ کمتر/بیشتر: 1.08 تا 1.2 */
+}
 /* =========================
   WRONGLESS PAGE
 ========================= */
@@ -2187,14 +2264,14 @@ body.comeon-body {
 صفحه‌ی تولیدات ما
 =================== */
 
-.intro-text {
+.products-text {
   text-align: center;
   margin: 0;
   padding: 0 16px;
 }
 
-.intro-text p {
-  margin: 0 auto 60px;   /* عدد آخر = فاصله تا حباب‌ها */
+.products-text p {
+  margin: 0 auto 60px; /* عدد آخر = فاصله تا حباب‌ها */
   max-width: 700px;
   font-size: clamp(0.85rem, 1.8vw, 1.1rem);
   font-weight: 600;
@@ -2222,6 +2299,17 @@ body.comeon-body {
 .bubble {
   position: absolute;
   border-radius: 50%;
+  left: calc(var(--l) * 1%);
+  top: calc(var(--t) * 1%);
+  width: calc(var(--w) * 1%);
+  height: calc(var(--h) * 1%);
+
+  background-image: url("../images/Products/background.webp");
+  background-repeat: no-repeat;
+  background-size: calc(10000% / var(--w)) calc(10000% / var(--h));
+  background-position: calc(var(--l) / (100 - var(--w)) * 100%)
+    calc(var(--t) / (100 - var(--h)) * 100%);
+
   transition:
     transform 0.3s,
     box-shadow 0.3s;
@@ -2229,48 +2317,151 @@ body.comeon-body {
 
 .bubble:hover,
 .bubble:focus-visible {
-  transform: scale(1.06);
-  box-shadow: 0 0 25px rgba(13, 13, 13, 0.6);
+  z-index: 5;
+  transform: scale(1.1);
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.95);
 }
 
 .bubble-theater {
-  left: 0.3%;
-  top: 8.5%;
-  width: 16.6%;
-  height: 28.1%;
+  --l: 0.3;
+  --t: 8.5;
+  --w: 16.6;
+  --h: 28.1;
 }
 .bubble-films {
-  left: 32%;
-  top: 7.7%;
-  width: 17.1%;
-  height: 29.1%;
+  --l: 32;
+  --t: 7.7;
+  --w: 17.1;
+  --h: 29.1;
 }
 .bubble-audio {
-  left: 78.6%;
-  top: 8%;
-  width: 17.7%;
-  height: 30%;
+  --l: 78.6;
+  --t: 8;
+  --w: 17.7;
+  --h: 30;
 }
 .bubble-books {
-  left: 5%;
-  top: 60.5%;
-  width: 16.6%;
-  height: 28.1%;
+  --l: 5;
+  --t: 60.5;
+  --w: 16.6;
+  --h: 28.1;
 }
 .bubble-red {
-  left: 35.3%;
-  top: 56.4%;
-  width: 24.3%;
-  height: 41.2%;
+  --l: 35.3;
+  --t: 56.4;
+  --w: 24.3;
+  --h: 41.2;
 }
 .bubble-purple {
-  left: 76.4%;
-  top: 65.4%;
-  width: 17.1%;
-  height: 29.1%;
+  --l: 76.4;
+  --t: 65.4;
+  --w: 17.1;
+  --h: 29.1;
 }
 
+/* =========================================
+   صفحه‌ی حال خوب ما
+========================================= */
 
+.joyful-text {
+  width: 70%;
+  margin: 5% 20% 5%;
+
+  color: #fff;
+  direction: rtl;
+  text-align: right;
+}
+
+.joyful-text p {
+  margin: 0 0 25px;
+
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.joyful-vase {
+  margin: 0 70% 0 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joyful-vase img {
+  display: block;
+  max-width: 500px;
+  height: auto;
+}
+
+/* =========================================
+   هاور برون‌سو: اسم‌ها و همه‌ی پوسترها
+========================================= */
+
+/* اسم مهرک و حسین پایین صفحه‌ی اصلی */
+.ending-names a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.ending-names a:hover {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+/* پوسترهای صفحه‌ی فیلم‌ها، قصه‌های صوتی و تئاترها
+   (قبلاً به داخل کوچک می‌شدند و کادرشان جلوی بزرگ‌شدن را می‌گرفت) */
+.filmography-poster-image,
+.audiostories-poster-image,
+.ourtheater-poster-image {
+  overflow: visible;
+}
+
+.filmography-item:hover .filmography-poster-image img,
+.audiostories-poster:hover .audiostories-poster-image img,
+.ourtheater-poster:hover .ourtheater-poster-image img {
+  transform: scale(1.08);
+}
+
+.filmography-item,
+.audiostories-poster,
+.ourtheater-poster {
+  position: relative;
+}
+
+.filmography-item:hover,
+.audiostories-poster:hover,
+.ourtheater-poster:hover {
+  z-index: 5;
+}
+
+/* بقیه‌ی پوسترها: بی‌غلط، واقعاً نه، از قاب من، تئاتر در حال اجرا */
+.other-film img,
+.wrongless-poster img,
+.comeon-poster img,
+.frommyframe-poster img,
+.performing-poster img {
+  transition: transform 0.3s ease;
+}
+
+.other-film:hover img,
+.wrongless-poster:hover img,
+.comeon-poster:hover img,
+.frommyframe-poster:hover img,
+.performing-poster:hover img {
+  transform: scale(1.08);
+}
+
+.other-film,
+.wrongless-poster {
+  position: relative;
+}
+
+.other-film:hover,
+.wrongless-poster:hover {
+  z-index: 5;
+}
 
 /* =========================================
    MOBILE
